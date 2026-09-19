@@ -1,25 +1,27 @@
 # PROKRITO-LIVE
 
-**Real-Time Audio & Video Social Live Streaming Platform**
+A premium real-time audio & video social live streaming platform concept, prepared for rapid launch and presentation.
 
-This repository contains the responsive PROKRITO-LIVE Command Center dashboard experience. It is implemented as a lightweight, dependency-free web UI so it can be previewed immediately in any browser or deployed to GitHub Pages.
+## Included
 
-## Included in this first slice
-
-- Premium, responsive admin command center with dark navigation shell
-- Platform KPI cards for users, activity, revenue and host earnings
-- Interactive activity chart with revenue/users/rooms states and date selector
-- Live room monitoring table with room type, engagement and status
-- Active room breakdown and AI engagement insight banner
-- Navigation for users, hosts, wallet, gifts, events, moderation, AI and settings
-- Mobile navigation drawer and toast feedback for key actions
+- Premium admin dashboard UI
+- Live room analytics and monitoring
+- Host center and wallet cards
+- Gift economy and event modules
+- Moderation and AI center sections
+- Responsive, dark/light theme support
+- Clean project structure ready for extension
 
 ## Run locally
 
-Open `index.html` directly, or serve the folder with any static server:
+Open `index.html` directly in a browser, or serve it with:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-The real-time, WebRTC, payment, wallet and moderation services described in the product brief should be connected through the platform API and event gateway in the next implementation slices. The UI is structured to keep those modules independently extensible.
+Then open: http://localhost:8000
+
+## Notes
+
+This is a front-end launch-ready UI shell designed for a live-stream platform product demo. The architecture is laid out to scale into a full-stack build with WebRTC, Socket.IO, Redis, PostgreSQL, and wallet/payment APIs.

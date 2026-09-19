@@ -1,56 +1,537 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#07111f" />
-  <meta name="description" content="PROKRITO-LIVE real-time audio and video social live streaming platform dashboard" />
-  <title>PROKRITO-LIVE · Command Center</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="app-shell">
-    <aside class="sidebar" id="sidebar">
-      <div class="brand"><span class="brand-mark"><i></i><i></i><i></i></span><span>PROKRITO<span class="brand-accent">-LIVE</span></span></div>
-      <div class="workspace"><span class="live-dot"></span><span>Production workspace</span><button aria-label="Change workspace">⌄</button></div>
-      <nav class="nav" aria-label="Main navigation">
-        <p class="nav-label">COMMAND CENTER</p>
-        <a class="nav-item active" href="#overview" data-view="overview"><span class="icon">⌂</span> Overview</a>
-        <a class="nav-item" href="#live" data-view="live"><span class="icon">◉</span> Live rooms <b>24</b></a>
-        <a class="nav-item" href="#users" data-view="users"><span class="icon">♙</span> Users</a>
-        <a class="nav-item" href="#hosts" data-view="hosts"><span class="icon">✦</span> Hosts & agencies</a>
-        <p class="nav-label">MONETIZATION</p>
-        <a class="nav-item" href="#wallet" data-view="wallet"><span class="icon">◈</span> Wallet & coins</a>
-        <a class="nav-item" href="#gifts" data-view="gifts"><span class="icon">♢</span> Gifts & donations</a>
-        <a class="nav-item" href="#events" data-view="events"><span class="icon">✧</span> Events & PK</a>
-        <p class="nav-label">TRUST & SAFETY</p>
-        <a class="nav-item" href="#moderation" data-view="moderation"><span class="icon">⌁</span> Moderation <b class="alert-count">7</b></a>
-        <a class="nav-item" href="#ai" data-view="ai"><span class="icon">✺</span> AI center <span class="new-pill">NEW</span></a>
-        <a class="nav-item" href="#settings" data-view="settings"><span class="icon">⚙</span> Settings</a>
-      </nav>
-      <div class="sidebar-footer"><div class="support-icon">?</div><div><strong>Need a hand?</strong><span>Open support center</span></div><span>›</span></div>
-    </aside>
-    <main class="main">
-      <header class="topbar"><button class="mobile-menu" id="mobileMenu">☰</button><div class="breadcrumbs">Command Center <span>/</span> <strong id="pageTitle">Overview</strong></div><div class="top-actions"><button class="icon-btn" title="Search">⌕</button><button class="icon-btn notification" title="Notifications">♧<i></i></button><div class="profile"><div class="avatar">AR</div><div class="profile-copy"><strong>Arif Rahman</strong><span>Super admin</span></div><span>⌄</span></div></div></header>
-      <div class="content" id="appContent">
-        <section class="page-heading"><div><div class="eyebrow"><span class="pulse"></span> LIVE PLATFORM STATUS</div><h1>Good evening, Arif <span class="wave">✦</span></h1><p>Here's what's happening across your community today.</p></div><div class="heading-actions"><button class="btn ghost" id="exportBtn">⇩ <span>Export report</span></button><button class="btn primary" id="createBtn">＋ <span>Create event</span></button></div></section>
-        <section class="metric-grid">
-          <article class="metric-card accent-blue"><div class="metric-top"><span>Total users</span><span class="metric-icon">♙</span></div><div class="metric-value">248,620</div><div class="metric-foot"><span class="trend up">↑ 12.8%</span><span>vs. last month</span><div class="spark blue"></div></div></article>
-          <article class="metric-card accent-violet"><div class="metric-top"><span>Active right now</span><span class="metric-icon">◉</span></div><div class="metric-value">8,942</div><div class="metric-foot"><span class="trend up">↑ 8.4%</span><span>vs. yesterday</span><div class="spark violet"></div></div></article>
-          <article class="metric-card accent-gold"><div class="metric-top"><span>Platform revenue</span><span class="metric-icon">◈</span></div><div class="metric-value">$42,680</div><div class="metric-foot"><span class="trend up">↑ 18.2%</span><span>vs. last month</span><div class="spark gold"></div></div></article>
-          <article class="metric-card accent-pink"><div class="metric-top"><span>Host earnings</span><span class="metric-icon">✦</span></div><div class="metric-value">$28,490</div><div class="metric-foot"><span class="trend down">↓ 3.1%</span><span>vs. last month</span><div class="spark pink"></div></div></article>
-        </section>
-        <section class="main-grid"><article class="panel analytics-panel"><div class="panel-head"><div><h2>Platform activity</h2><p>Revenue and active users over time</p></div><div class="segmented"><button class="active">Revenue</button><button>Users</button><button>Rooms</button></div></div><div class="chart-legend"><span><i class="legend-dot purple"></i> Revenue</span><span><i class="legend-dot cyan"></i> Active users</span><select aria-label="Chart period"><option>Last 7 days</option><option>Last 30 days</option></select></div><div class="chart-wrap"><div class="y-axis"><span>$50k</span><span>$40k</span><span>$30k</span><span>$20k</span><span>$10k</span><span>$0</span></div><svg class="chart" viewBox="0 0 700 260" preserveAspectRatio="none" role="img" aria-label="Platform activity chart"><defs><linearGradient id="fillPurple" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#a78bfa" stop-opacity=".25"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></linearGradient><linearGradient id="fillCyan" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#22d3ee" stop-opacity=".18"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></linearGradient></defs><g class="grid-lines"><path d="M0 15H700M0 63H700M0 111H700M0 159H700M0 207H700M0 255H700"/></g><path class="area purple-area" d="M0 180 C40 160 64 180 100 145 S165 150 200 117 S260 145 300 105 S365 125 400 88 S460 112 500 70 S560 90 600 52 S660 65 700 28 V260 H0Z"/><path class="line purple-line" d="M0 180 C40 160 64 180 100 145 S165 150 200 117 S260 145 300 105 S365 125 400 88 S460 112 500 70 S560 90 600 52 S660 65 700 28"/><path class="area cyan-area" d="M0 218 C55 204 70 215 105 190 S170 205 205 175 S260 190 305 160 S360 180 405 142 S470 165 505 130 S570 145 610 116 S660 125 700 102 V260 H0Z"/><path class="line cyan-line" d="M0 218 C55 204 70 215 105 190 S170 205 205 175 S260 190 305 160 S360 180 405 142 S470 165 505 130 S570 145 610 116 S660 125 700 102"/><circle class="chart-point" cx="500" cy="70" r="5"/><line class="guide" x1="500" y1="20" x2="500" y2="255"/></svg><div class="x-axis"><span>Sep 13</span><span>Sep 14</span><span>Sep 15</span><span>Sep 16</span><span>Sep 17</span><span>Sep 18</span><span>Sep 19</span></div></div></article>
-        <article class="panel activity-panel"><div class="panel-head"><div><h2>Live activity</h2><p>What’s happening right now</p></div><button class="more">•••</button></div><div class="activity-list"><div class="activity-item"><div class="activity-avatar img-1">S</div><div><strong>Sarah K.</strong><span>started a video room</span></div><time>2m</time></div><div class="activity-item"><div class="activity-avatar img-2">M</div><div><strong>Mark Wilson</strong><span>received <em>Rose Bouquet</em></span></div><time>4m</time></div><div class="activity-item"><div class="activity-avatar img-3">N</div><div><strong>Nadia Ahmed</strong><span>reached <em>10K followers</em></span></div><time>8m</time></div><div class="activity-item"><div class="activity-avatar img-4">J</div><div><strong>James Lee</strong><span>started an audio room</span></div><time>12m</time></div><div class="activity-item"><div class="activity-avatar img-5">A</div><div><strong>Amelia R.</strong><span>joined <em>PK Battle</em></span></div><time>16m</time></div></div><button class="link-btn">View all activity <span>→</span></button></article></section>
-        <section class="lower-grid"><article class="panel rooms-panel"><div class="panel-head"><div><h2>Live rooms</h2><p>Monitor your most active rooms</p></div><a class="view-link" href="#live">View all <span>→</span></a></div><div class="table-scroll"><table><thead><tr><th>ROOM</th><th>TYPE</th><th>VIEWERS</th><th>ENGAGEMENT</th><th>STATUS</th><th></th></tr></thead><tbody><tr><td><div class="room-name"><div class="room-thumb thumb-1">🎙️</div><div><strong>Late night talks</strong><span>Sarah K. · @sarahk</span></div></div></td><td><span class="type-pill video">Video</span></td><td><strong>1,248</strong></td><td><div class="engagement"><span>82%</span><i><b style="width:82%"></b></i></div></td><td><span class="status-live"><i></i> LIVE</span></td><td><button class="row-more">•••</button></td></tr><tr><td><div class="room-name"><div class="room-thumb thumb-2">🎧</div><div><strong>Lo-fi & chill beats</strong><span>James Lee · @jameslee</span></div></div></td><td><span class="type-pill audio">Audio</span></td><td><strong>936</strong></td><td><div class="engagement"><span>74%</span><i><b style="width:74%"></b></i></div></td><td><span class="status-live"><i></i> LIVE</span></td><td><button class="row-more">•••</button></td></tr><tr><td><div class="room-name"><div class="room-thumb thumb-3">🎮</div><div><strong>Squad goals · PK</strong><span>Mark Wilson · @markw</span></div></div></td><td><span class="type-pill video">Video</span></td><td><strong>714</strong></td><td><div class="engagement"><span>68%</span><i><b style="width:68%"></b></i></div></td><td><span class="status-live"><i></i> LIVE</span></td><td><button class="row-more">•••</button></td></tr></tbody></table></div></article><article class="panel donut-panel"><div class="panel-head"><div><h2>Room breakdown</h2><p>Active rooms by type</p></div><button class="more">•••</button></div><div class="donut-row"><div class="donut"><div><strong>24</strong><span>rooms</span></div></div><div class="breakdown"><div><i class="dot purple"></i><span>Video rooms</span><strong>12</strong></div><div><i class="dot cyan"></i><span>Audio rooms</span><strong>8</strong></div><div><i class="dot gold"></i><span>PK battles</span><strong>4</strong></div></div></div><div class="room-stat"><span>Avg. room duration</span><strong>42m 18s</strong><span class="trend up">↑ 6.2%</span></div></article></section>
-        <section class="insight-banner"><div class="insight-icon">✺</div><div><strong>AI insight · Engagement is trending up</strong><p>Peak activity is between 8–10 PM. Consider scheduling more featured rooms during this window.</p></div><button class="link-btn">View insights →</button></section>
-      </div>
-    </main>
-  </div>
-  <div class="toast" id="toast" role="status"></div>
-  <script src="app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="PROKRITO-LIVE — Real-time audio & video social live streaming platform dashboard" />
+    <title>PROKRITO-LIVE | Command Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand-wrap">
+          <div class="brand-mark">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="brand-text">PROKRITO<span>-LIVE</span></div>
+        </div>
+
+        <div class="workspace-box">
+          <span class="status-dot"></span>
+          <div>
+            <strong>Production</strong>
+            <small>Global live</small>
+          </div>
+          <button aria-label="Workspace settings">▾</button>
+        </div>
+
+        <nav class="nav">
+          <p class="nav-label">Overview</p>
+          <a class="nav-item active" href="#overview"><span>◈</span> Overview</a>
+          <a class="nav-item" href="#live"><span>◉</span> Live rooms</a>
+          <a class="nav-item" href="#users"><span>◌</span> Users</a>
+          <a class="nav-item" href="#hosts"><span>✦</span> Hosts</a>
+          <a class="nav-item" href="#wallet"><span>⌁</span> Wallet</a>
+          <a class="nav-item" href="#gifts"><span>❖</span> Gifts</a>
+          <a class="nav-item" href="#events"><span>✧</span> Events</a>
+          <a class="nav-item" href="#moderation"><span>⚑</span> Moderation</a>
+          <a class="nav-item" href="#ai"><span>✺</span> AI center</a>
+          <a class="nav-item" href="#settings"><span>⚙</span> Settings</a>
+        </nav>
+
+        <div class="sidebar-card">
+          <div class="support-badge">?</div>
+          <div>
+            <strong>Support</strong>
+            <small>Open ops center</small>
+          </div>
+          <button>›</button>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div class="top-left">
+            <button class="mobile-menu" id="mobileMenu" aria-label="Toggle menu">☰</button>
+            <div class="crumbs">Command Center / <strong>Overview</strong></div>
+          </div>
+
+          <div class="top-actions">
+            <button class="icon-btn" aria-label="Search">⌕</button>
+            <button class="icon-btn has-bell" aria-label="Notifications">◍<span></span></button>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☼</button>
+            <div class="profile-mini">
+              <div class="mini-avatar">AR</div>
+              <div>
+                <strong>Arif Rahman</strong>
+                <small>Super Admin</small>
+              </div>
+              <span>▾</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="page-wrap">
+          <section class="hero-row" id="overview">
+            <div>
+              <div class="eyebrow"><span class="pulse"></span> LIVE PLATFORM STATUS</div>
+              <h1>Good evening, Arif</h1>
+              <p>Real-time social streaming and community operations are trending above target.</p>
+            </div>
+
+            <div class="hero-actions">
+              <button class="btn secondary">⇩ Export</button>
+              <button class="btn primary">＋ New event</button>
+            </div>
+          </section>
+
+          <section class="kpi-grid">
+            <article class="kpi-card violet">
+              <div class="kpi-head">
+                <span>Total users</span>
+                <span class="kpi-icon">◌</span>
+              </div>
+              <h3>248,620</h3>
+              <div class="kpi-meta">
+                <strong class="up">↑ 12.8%</strong>
+                <small>vs last month</small>
+              </div>
+            </article>
+
+            <article class="kpi-card cyan">
+              <div class="kpi-head">
+                <span>Active now</span>
+                <span class="kpi-icon">◉</span>
+              </div>
+              <h3>8,942</h3>
+              <div class="kpi-meta">
+                <strong class="up">↑ 8.4%</strong>
+                <small>vs last 24h</small>
+              </div>
+            </article>
+
+            <article class="kpi-card gold">
+              <div class="kpi-head">
+                <span>Platform revenue</span>
+                <span class="kpi-icon">◈</span>
+              </div>
+              <h3>$42,680</h3>
+              <div class="kpi-meta">
+                <strong class="up">↑ 18.2%</strong>
+                <small>today</small>
+              </div>
+            </article>
+
+            <article class="kpi-card pink">
+              <div class="kpi-head">
+                <span>Host earnings</span>
+                <span class="kpi-icon">✦</span>
+              </div>
+              <h3>$28,490</h3>
+              <div class="kpi-meta">
+                <strong class="down">↓ 3.1%</strong>
+                <small>past 7d</small>
+              </div>
+            </article>
+          </section>
+
+          <section class="content-grid">
+            <article class="panel chart-panel">
+              <div class="panel-head">
+                <div>
+                  <h2>Platform activity</h2>
+                  <small>Revenue and active users over time</small>
+                </div>
+                <div class="segmented control-group">
+                  <button class="active">Revenue</button>
+                  <button>Users</button>
+                  <button>Rooms</button>
+                </div>
+              </div>
+
+              <div class="chart-legend">
+                <span><i class="dot purple"></i> Revenue</span>
+                <span><i class="dot cyan"></i> Users</span>
+                <select>
+                  <option>Last 7 days</option>
+                  <option>Last 30 days</option>
+                  <option>Last 90 days</option>
+                </select>
+              </div>
+
+              <div class="chart-wrap">
+                <div class="y-axis">
+                  <span>50k</span>
+                  <span>40k</span>
+                  <span>30k</span>
+                  <span>20k</span>
+                  <span>10k</span>
+                  <span>0</span>
+                </div>
+                <svg viewBox="0 0 760 260" role="img" aria-label="Platform analytics chart">
+                  <defs>
+                    <linearGradient id="areaPurple" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stop-color="#9b7ef7" stop-opacity="0.35"/>
+                      <stop offset="100%" stop-color="#9b7ef7" stop-opacity="0"/>
+                    </linearGradient>
+                    <linearGradient id="areaCyan" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stop-color="#36d5f5" stop-opacity="0.22"/>
+                      <stop offset="100%" stop-color="#36d5f5" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <g class="grid-lines">
+                    <path d="M0 15H760M0 60H760M0 105H760M0 150H760M0 195H760M0 240H760"/>
+                  </g>
+                  <path d="M0 170 C40 152, 70 164, 110 140 S190 120, 220 110 S290 133, 320 92 S390 118, 420 72 S490 95, 520 72 S610 80, 650 42 S720 55, 760 26 L760 260 L0 260 Z" fill="url(#areaPurple)"/>
+                  <path d="M0 195 C35 180, 85 198, 120 180 S195 188, 225 165 S285 174, 320 150 S395 165, 420 130 S495 150, 525 125 S610 140, 650 108 S720 120, 760 96 L760 260 L0 260 Z" fill="url(#areaCyan)"/>
+                  <path d="M0 170 C40 152, 70 164, 110 140 S190 120, 220 110 S290 133, 320 92 S390 118, 420 72 S490 95, 520 72 S610 80, 650 42 S720 55, 760 26" fill="none" stroke="#9b7ef7" stroke-width="3" stroke-linecap="round"/>
+                  <path d="M0 195 C35 180, 85 198, 120 180 S195 188, 225 165 S285 174, 320 150 S395 165, 420 130 S495 150, 525 125 S610 140, 650 108 S720 120, 760 96" fill="none" stroke="#36d5f5" stroke-width="2.5" stroke-linecap="round"/>
+                  <circle cx="520" cy="72" r="5" fill="#fff" stroke="#9b7ef7" stroke-width="3"/>
+                  <line x1="520" x2="520" y1="20" y2="235" stroke="#ece7ff" stroke-dasharray="4 6"/>
+                </svg>
+                <div class="x-axis">
+                  <span>Sep 13</span>
+                  <span>Sep 14</span>
+                  <span>Sep 15</span>
+                  <span>Sep 16</span>
+                  <span>Sep 17</span>
+                  <span>Sep 18</span>
+                  <span>Sep 19</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="panel side-panel">
+              <div class="panel-head compact">
+                <div>
+                  <h2>Live activity</h2>
+                  <small>Latest platform events</small>
+                </div>
+                <button class="more-btn">•••</button>
+              </div>
+
+              <div class="activity-list">
+                <div class="activity-item">
+                  <div class="avatar one">S</div>
+                  <div class="activity-copy">
+                    <strong>Sarah K.</strong>
+                    <small>started a video room</small>
+                  </div>
+                  <time>2m</time>
+                </div>
+
+                <div class="activity-item">
+                  <div class="avatar two">M</div>
+                  <div class="activity-copy">
+                    <strong>Mark W.</strong>
+                    <small>received Rose Bouquet</small>
+                  </div>
+                  <time>4m</time>
+                </div>
+
+                <div class="activity-item">
+                  <div class="avatar three">N</div>
+                  <div class="activity-copy">
+                    <strong>Nadia A.</strong>
+                    <small>reached 10K followers</small>
+                  </div>
+                  <time>8m</time>
+                </div>
+
+                <div class="activity-item">
+                  <div class="avatar four">J</div>
+                  <div class="activity-copy">
+                    <strong>James L.</strong>
+                    <small>started an audio room</small>
+                  </div>
+                  <time>12m</time>
+                </div>
+
+                <div class="activity-item">
+                  <div class="avatar five">A</div>
+                  <div class="activity-copy">
+                    <strong>Amelia R.</strong>
+                    <small>joined PK battle</small>
+                  </div>
+                  <time>17m</time>
+                </div>
+              </div>
+
+              <button class="link-btn">View all activity →</button>
+            </article>
+          </section>
+
+          <section class="two-col-grid">
+            <article class="panel" id="live">
+              <div class="panel-head">
+                <div>
+                  <h2>Live rooms</h2>
+                  <small>Monitor high-performing rooms</small>
+                </div>
+                <a href="#" class="tiny-link">View all →</a>
+              </div>
+
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Room</th>
+                      <th>Type</th>
+                      <th>Viewers</th>
+                      <th>Eng.</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="room-name">
+                          <span class="room-icon rose">🎙️</span>
+                          <div>
+                            <strong>Late Night Talks</strong>
+                            <small>Sarah K. · @sarahk</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td><span class="pill video">Video</span></td>
+                      <td>1,248</td>
+                      <td><div class="mini-bar"><span style="width:82%"></span></div></td>
+                      <td><span class="live-tag">● LIVE</span></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="room-name">
+                          <span class="room-icon sky">🎧</span>
+                          <div>
+                            <strong>Lo-fi & Chill</strong>
+                            <small>James L. · @jameslee</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td><span class="pill audio">Audio</span></td>
+                      <td>936</td>
+                      <td><div class="mini-bar"><span style="width:74%"></span></div></td>
+                      <td><span class="live-tag">● LIVE</span></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="room-name">
+                          <span class="room-icon violet">🎮</span>
+                          <div>
+                            <strong>Squad Goals · PK</strong>
+                            <small>Mark W. · @markw</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td><span class="pill battle">PK</span></td>
+                      <td>714</td>
+                      <td><div class="mini-bar"><span style="width:68%"></span></div></td>
+                      <td><span class="live-tag">● LIVE</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="panel" id="users">
+              <div class="panel-head compact">
+                <div>
+                  <h2>Room breakdown</h2>
+                  <small>Active rooms by type</small>
+                </div>
+                <button class="more-btn">•••</button>
+              </div>
+
+              <div class="donut-wrap">
+                <div class="donut-chart">
+                  <div>
+                    <strong>24</strong>
+                    <small>rooms</small>
+                  </div>
+                </div>
+
+                <div class="legend-list">
+                  <div><i class="dot purple"></i> Video rooms<strong>12</strong></div>
+                  <div><i class="dot cyan"></i> Audio rooms<strong>8</strong></div>
+                  <div><i class="dot gold"></i> PK battles<strong>4</strong></div>
+                </div>
+              </div>
+
+              <div class="stat-strip">
+                <span>Avg. room duration</span>
+                <strong>42m 18s</strong>
+                <b class="up">↑ 6.2%</b>
+              </div>
+            </article>
+          </section>
+
+          <section class="insight-banner">
+            <div class="insight-icon">✺</div>
+            <div>
+              <strong>AI insight</strong>
+              <small>Engagement will peak between 8:00 PM and 10:00 PM. Consider scheduling premium host rooms during that window.</small>
+            </div>
+            <button class="link-btn">View insights →</button>
+          </section>
+
+          <section class="module-grid">
+            <article class="panel" id="hosts">
+              <div class="panel-head compact">
+                <div>
+                  <h2>Host center</h2>
+                  <small>Top performer overview</small>
+                </div>
+              </div>
+
+              <div class="host-card">
+                <div class="host-profile">
+                  <div class="profile-image">AN</div>
+                  <div>
+                    <strong>Anna Noor</strong>
+                    <small>Top Host · 22.4K followers</small>
+                  </div>
+                </div>
+                <div class="score-box">
+                  <span>Revenue</span>
+                  <strong>$12,480</strong>
+                </div>
+              </div>
+
+              <div class="metric-list compact">
+                <div><span>Live hours</span><strong>42.8h</strong></div>
+                <div><span>Gift volume</span><strong>9.4K</strong></div>
+                <div><span>Avg. rating</span><strong>4.9/5</strong></div>
+              </div>
+            </article>
+
+            <article class="panel" id="wallet">
+              <div class="panel-head compact">
+                <div>
+                  <h2>Wallet & coins</h2>
+                  <small>Monetization overview</small>
+                </div>
+              </div>
+
+              <div class="wallet-stack">
+                <div class="wallet-row">
+                  <span>Coin balance</span>
+                  <strong>24,550</strong>
+                </div>
+                <div class="wallet-row">
+                  <span>Diamond balance</span>
+                  <strong>8,240</strong>
+                </div>
+                <div class="wallet-row">
+                  <span>Withdrawal-ready</span>
+                  <strong>$6,820</strong>
+                </div>
+              </div>
+            </article>
+
+            <article class="panel" id="gifts">
+              <div class="panel-head compact">
+                <div>
+                  <h2>Gift economy</h2>
+                  <small>Premium and luxury items</small>
+                </div>
+              </div>
+
+              <div class="gifts-row">
+                <div class="gift-item"><span>💎</span><strong>Diamond Ring</strong><small>1,200 coins</small></div>
+                <div class="gift-item"><span>🎁</span><strong>Luxury Box</strong><small>980 coins</small></div>
+                <div class="gift-item"><span>🌹</span><strong>Rose Bouquet</strong><small>620 coins</small></div>
+              </div>
+            </article>
+
+            <article class="panel" id="events">
+              <div class="panel-head compact">
+                <div>
+                  <h2>Events & PK</h2>
+                  <small>Seasonal and public campaigns</small>
+                </div>
+              </div>
+
+              <div class="event-box">
+                <div>
+                  <strong>Summer Clash 2026</strong>
+                  <small>8,240 participants</small>
+                </div>
+                <span class="badge-pill">Live</span>
+              </div>
+              <div class="event-box muted">
+                <div>
+                  <strong>Agency Championship</strong>
+                  <small>Ends in 12h</small>
+                </div>
+                <span class="badge-pill alt">3.4k</span>
+              </div>
+            </article>
+          </section>
+
+          <section class="bottom-grid">
+            <article class="panel" id="moderation">
+              <div class="panel-head compact">
+                <div>
+                  <h2>Moderation</h2>
+                  <small>Trust & safety</small>
+                </div>
+              </div>
+
+              <div class="stack-list">
+                <div><span>Reports pending</span><strong>27</strong></div>
+                <div><span>AI risk alerts</span><strong>11</strong></div>
+                <div><span>Frozen wallets</span><strong>3</strong></div>
+              </div>
+            </article>
+
+            <article class="panel" id="ai">
+              <div class="panel-head compact">
+                <div>
+                  <h2>AI center</h2>
+                  <small>Risk scoring & insights</small>
+                </div>
+              </div>
+
+              <div class="ai-score">
+                <div>
+                  <strong>92%</strong>
+                  <small>Trust score</small>
+                </div>
+                <div class="score-line"><span style="width:92%"></span></div>
+              </div>
+              <div class="stack-list">
+                <div><span>Spam blocked</span><strong>1.8k</strong></div>
+                <div><span>Fraud detected</span><strong>43</strong></div>
+              </div>
+            </article>
+
+            <article class="panel" id="settings">
+              <div class="panel-head compact">
+                <div>
+                  <h2>Platform health</h2>
+                  <small>Infrastructure and uptime</small>
+                </div>
+              </div>
+
+              <div class="health-grid">
+                <div><span>WebRTC</span><strong>99.9%</strong></div>
+                <div><span>API uptime</span><strong>99.8%</strong></div>
+                <div><span>Redis cache</span><strong>98.7%</strong></div>
+                <div><span>Storage</span><strong>96.4%</strong></div>
+              </div>
+            </article>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <div id="toast" class="toast">Ready.</div>
+    <script src="app.js"></script>
+  </body>
 </html>
