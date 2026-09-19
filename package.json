@@ -1,0 +1,21 @@
+{
+  "name": "prokrito-live",
+  "version": "0.2.0",
+  "private": true,
+  "description": "PROKRITO-LIVE real-time audio and video social live streaming platform foundation",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch server/index.js",
+    "start": "node server/index.js",
+    "check": "node --check server/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "socket.io": "^4.8.1"
+  }
+}
